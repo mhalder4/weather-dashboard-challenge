@@ -14,11 +14,11 @@
 
   <div class="container-fluid row">
     <div class="col-3 shadow p-3 mb-5 bg-body-tertiary rounded">
-      <div class="mb-3">
+      <div class="mb-3 search-box">
         <label for="city-search" class="form-label fs-2 fw-bold">Search for a city:</label>
-        <input type="text" class="form-control" id="city-search" placeholder="City">
+        <input type="text" class="form-control" id="city-search" placeholder="City" value="Ankeny">
+        <button type="button" class="btn btn-info search-btn col-12">Search</button>
       </div>
-      <button type="button" class="btn btn-info search-btn col-12">Search</button>
       <div class="fs-4 fw-bold mt-3 mb-3">Previous Searches</div>
     </div>
     <div class="col-9">
@@ -68,6 +68,7 @@
     </div>
   </div>
 
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="./script.js"></script>
 </body>
 
