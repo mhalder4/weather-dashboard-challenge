@@ -37,7 +37,7 @@ function manageLocalStorage() {
 // API call to get the cityy's lat and lon
 async function getCityLatLon(city) {
   try {
-    const query = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city},&limit=15&appid=845c2648c2666da634c7f3ee545634ac`)
+    const query = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city},&limit=15&appid=845c2648c2666da634c7f3ee545634ac`)
     const result = await query.json();
 
     if (result.cod === "400") {
@@ -53,10 +53,10 @@ async function getCityLatLon(city) {
 
 // API call to get weather based on lat and lon
 async function getCityWeather(lat, lon) {
-  const forecastQuery = await fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=845c2648c2666da634c7f3ee545634ac&units=imperial`)
+  const forecastQuery = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=845c2648c2666da634c7f3ee545634ac&units=imperial`)
   const forecastResult = await forecastQuery.json();
 
-  const weatherQuery = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=845c2648c2666da634c7f3ee545634ac&units=imperial`)
+  const weatherQuery = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=845c2648c2666da634c7f3ee545634ac&units=imperial`)
   const weatherResult = await weatherQuery.json();
 
   const data = {
